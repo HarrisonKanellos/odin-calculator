@@ -10,34 +10,46 @@
         <div class="background">
             <main>
                 <div class="calc-content-container">
-                    <div class="display"></div>
+                    <div class="row display">0</div>
+
                     <div class="row" id="button-row-1">
-                        <button id="all-clear">AC</button>
-                        <div class="title-engraving">Harro's Magiculator</div>
-                        <button class="operator" id="divide">/</button>
+                        <div class="row-half-size">
+                            <button type="button" id="all-clear">AC</button>
+                        </div>
+                        <div class="row-half-size" id="flex-end-divide">
+                            <button type="button" class="operator" id="divide">/</button>
+                        </div>  
                     </div>
+
                     <div class="row" id="button-row-2">
-                        <button class="digit" id="seven">7</button>
-                        <button class="digit" id="eight">8</button>
-                        <button class="digit" id="nine">9</button>
-                        <button class="operator" id="multiply">*</button>
+                        <button type="button"class="digit" id="seven">7</button>
+                        <button type="button" class="digit" id="eight">8</button>
+                        <button type="button" class="digit" id="nine">9</button>
+                        <button type="button" class="operator" id="multiply">*</button>
                     </div>
+
                     <div class="row" id="button-row-3">
-                        <button class="digit" id="four">4</button>
-                        <button class="digit" id="five">5</button>
-                        <button class="digit" id="six">6</button>
-                        <button class="operator" id="subtract">-</button>
+                        <button type="button" class="digit" id="four">4</button>
+                        <button type="button" class="digit" id="five">5</button>
+                        <button type="button" class="digit" id="six">6</button>
+                        <button type="button" class="operator" id="subtract">-</button>
                     </div>
+
                     <div class="row" id="button-row-4">
-                        <button class="digit" id="one">1</button>
-                        <button class="digit" id="two">2</button>
-                        <button class="digit" id="three">3</button>
-                        <button class="opertaor" id="plus">+</button>
+                        <button type="button" class="digit" id="one">1</button>
+                        <button type="button" class="digit" id="two">2</button>
+                        <button type="button" class="digit" id="three">3</button>
+                        <button type="button" class="operator" id="plus">+</button>
                     </div>
+
                     <div class="row" id="button-row-5">
-                        <button class="digit" id="zero">0</button>
-                        <button class="digit" id="period">.</button>
-                        <button class="operator" id="equals">=</button>
+                        <div class="row-half-size">
+                            <button type="button" class="digit" id="zero">0</button>
+                        </div>
+                        <div class="row-half-size">
+                            <button type="button" class="digit" id="period">.</button>
+                            <button type="button" class="operator" id="equals">=</button>
+                        </div>
                     </div>
                 </div>
             </main>

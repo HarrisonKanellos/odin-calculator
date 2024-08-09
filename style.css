@@ -3,19 +3,92 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;    
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: monospace sans-serif;
 }
 
 .background {
     width: 100vw;
+    height: 100vh;
     background-color: darkolivegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
-    height: 900px;
-    width: 600px;
+    height: 600px;
+    width: 450px;
+    margin: 0 auto;
+    background-color: darkslategrey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calc-content-container {
+    height: 95%;
+    width: 95%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 8px;
+}
 
+.display {
+    background-color: lightslategrey;
+    font-size: 70px;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    gap: 7px;
+}
+
+button {
+    flex: 1;
+    box-sizing: content-box;
+    height: 100%;
+    border-radius: 8px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: honeydew;
+}
+
+.operator{
+    background-color: sandybrown;
+}
+
+#all-clear {
+    background-color: peru;
+}
+
+/* Cutomised row and button flexing */
+.row-half-size {
+    flex: 1;
+    display: flex;
+    gap: 7px;
+}
+
+#flex-end-divide {
+    justify-content: flex-end;
+}
+
+#divide {
+    flex: 0.5;
 }
