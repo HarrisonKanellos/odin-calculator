@@ -1,1 +1,1 @@
-# odin-calculator
+This project encompasses the creation of an onscreen browser calculator, harnessing the technologies of HTML, CSS and JavaScript.
