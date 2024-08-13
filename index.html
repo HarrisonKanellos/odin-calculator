@@ -5,6 +5,7 @@
         <meta name="viewport" width="viewport-width" initial-scale="1.0">
         <title>Harro's Magiculator</title>
         <link href="style.css" rel="stylesheet">
+        <script src="calculations.js" defer></script>
     </head>
     <body>
         <div class="background">
@@ -14,7 +15,7 @@
 
                     <div class="row" id="button-row-1">
                         <div class="row-half-size">
-                            <button type="button" id="all-clear">AC</button>
+                            <button type="button" class="all-clear">AC</button>
                         </div>
                         <div class="row-half-size" id="flex-end-divide">
                             <button type="button" class="operator" id="divide">/</button>
@@ -22,7 +23,7 @@
                     </div>
 
                     <div class="row" id="button-row-2">
-                        <button type="button"class="digit" id="seven">7</button>
+                        <button type="button" class="digit" id="seven">7</button>
                         <button type="button" class="digit" id="eight">8</button>
                         <button type="button" class="digit" id="nine">9</button>
                         <button type="button" class="operator" id="multiply">*</button>
