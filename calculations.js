@@ -61,17 +61,33 @@ function displayValue(num) {
     }
 }
 
-// TODO: if a period is used more than once in a number input
 function handleClick(event) {
     let target = event.target;
     switch (target.className) {
         case "digit":
             if (operatorInput === "") {
-                numInput1 += target.textContent;
+                if (target.id === "period" && numInput1.includes(".") === false) {
+                    numInput1 += target.textContent;
+                }
+                else if (target.id === "period" && numInput1.includes(".") === true) {
+                    // Do nothing
+                }
+                else {
+                    numInput1 += target.textContent;
+                }
                 displayValue(numInput1);
             }
+
             else {
-                numInput2 += target.textContent;
+                if (target.id === "period" && numInput2.includes(".") === false) {
+                    numInput2 += target.textContent;
+                }
+                else if (target.id === "period" && numInput2.includes(".") === true) {
+                    // Do nothing
+                }
+                else {
+                    numInput2 += target.textContent;
+                }
                 displayValue(numInput2);
             }
             break;
@@ -83,6 +99,7 @@ function handleClick(event) {
                 operatorInput = "";
                 numInput2 = "";
             }
+
             else if (target.id === "equals" && numInput2 === "") {
                 if (numInput2 === "") {
                     displayValue("0");
@@ -91,12 +108,14 @@ function handleClick(event) {
                     displayValue(numInput1);
                 }
             }
+
             else if (arr.includes(target.textContent) && numInput2 !== "") {
                 numInput1 = operate(numInput1, operatorInput, numInput2);
                 displayValue(numInput1);
                 operatorInput = target.textContent;
                 numInput2 = "";
             }
+
             else if (numInput1 !== "") {
                 operatorInput = target.textContent;
             }
